@@ -21,7 +21,7 @@ pipeline {
             }
     stage('Create a Docker image') {
       steps {
-        sh 'docker build -t sowjanyaparupally/healthcare:latest .'
+        sh 'docker build -t sowjanyaparupally/healthcare:1.0 .'
                     }
             }
     stage('Login to Dockerhub') {
@@ -33,7 +33,7 @@ pipeline {
             }
     stage('Push the Docker image') {
       steps {
-        sh 'docker push sowjanyaparupally/healthcare:latest'
+        sh 'docker push sowjanyaparupally/healthcare:1.0'
                                 }
             }
     stage('Deploy to Kubernetes') {
