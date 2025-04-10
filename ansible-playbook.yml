@@ -37,4 +37,4 @@
       ignore_errors: yes
 
     - name: Deploy Docker container
-      command: docker run -itd -p 8484:8082 sowjanyaparupally/healthcare20:1.0
+      command: docker run -itd -p 8480:8082 sowjanyaparupally/healthcare20:1.0
