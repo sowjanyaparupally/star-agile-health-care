@@ -33,7 +33,7 @@ pipeline {
             }
     stage('Push the Docker image') {
       steps {
-        sh 'docker push kavyaganji95/healthcarenew:latest'
+        sh 'docker push sowjanyaparupally/healthcarenew:latest'
                                 }
             }
     stage('Deploy Application using Ansible') {
