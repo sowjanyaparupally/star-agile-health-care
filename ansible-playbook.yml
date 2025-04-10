@@ -20,18 +20,18 @@
         state: started
         enabled: yes
 
-    - name: Stop any container using port 8484
+    - name: Stop any container using port 8480
       shell: |
         docker ps --filter "status=running" --format '{{.ID}} {{.Ports}}' \
-        | grep 8484 \
+        | grep 8480 \
         | awk '{print $1}' \
         | xargs -r docker stop
       ignore_errors: yes
 
-    - name: Remove any stopped container using port 8484
+    - name: Remove any stopped container using port 8480
       shell: |
         docker ps -a --filter "status=exited" --format '{{.ID}} {{.Ports}}' \
-        | grep 8484 \
+        | grep 8480 \
         | awk '{print $1}' \
         | xargs -r docker rm
       ignore_errors: yes
